@@ -1,6 +1,7 @@
 let sentence = ["The", "walrus", "danced", "through", "the", "trees", "in", "the", "light", "of", "the", "moon" ];
 
 let betterSentence = ["Hello", "my", "name", "is", "Tyler", "and", "I", "am", "in", "NSS", "cohort", "22"];
+
 let addExcitement = (theWordArray, punctuation) => {
     let finalOutput = ""
     for (var index = 0; index < theWordArray.length; index++) {
@@ -11,6 +12,7 @@ let addExcitement = (theWordArray, punctuation) => {
         } else {
             finalOutput = finalOutput + " " + theWordArray[index];
         }; 
+        
         document.write(finalOutput);
         console.log(finalOutput)
     }
