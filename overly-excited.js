@@ -2,25 +2,25 @@ let sentence = ["The", "walrus", "danced", "through", "the", "trees", "in", "the
 
 let betterSentence = ["Hello", "my", "name", "is", "Tyler", "and", "I", "am", "in", "NSS", "cohort", "22"];
 
-let addExcitement = (theWordArray, punctuation) => {
+let userInput = prompt("What punctuation do you want to use?");
+let addExcitement = (theWordArray, userInput) => {
     let finalOutput = ""
     for (var index = 0; index < theWordArray.length; index++) {
         const position = index + 1;
 
         if (position % 3 === 0) {
-            finalOutput = finalOutput + " " + theWordArray[index] + punctuation.repeat(position / 3); 
+            finalOutput = finalOutput + " " + theWordArray[index] + userInput.repeat(position / 3); 
         } else {
             finalOutput = finalOutput + " " + theWordArray[index];
         }; 
         
-        document.write(finalOutput);
+        document.write(finalOutput + "<br>");
         console.log(finalOutput)
     }
 }
 
-addExcitement(sentence, "?");
-
-addExcitement(betterSentence, "!" )
+addExcitement(sentence, userInput) 
+addExcitement(betterSentence, userInput)
 
 
     
